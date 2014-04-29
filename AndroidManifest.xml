@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.obihann.swear"
+    package="com.obihann.swearoclock"
     android:versionCode="1"
     android:versionName="0.1" >
 
@@ -13,6 +13,13 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
+
+		<activity android:name="com.obihann.swear.FilthyConfigActivity" android:label="@string/app_name">
+			<intent-filter> 
+		        <action android:name="android.intent.action.MAIN" />  
+			</intent-filter>
+		</activity>
+        
         <receiver
             android:name="com.obihann.swear.FuckingWidgetProvider"
             android:icon="@drawable/ic_launcher"
@@ -25,8 +32,9 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_info" />
         </receiver>
+        
         <receiver android:name="com.obihann.swear.ShittyBroadcastReceiver" >
         </receiver>
-    </application>
+	</application>
 
 </manifest>

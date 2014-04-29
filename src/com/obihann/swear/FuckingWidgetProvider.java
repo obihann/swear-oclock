@@ -4,8 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import com.obihann.swear.R;
-
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -16,6 +14,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.RemoteViews;
+
+import com.obihann.swearoclock.R;
 
 public class FuckingWidgetProvider extends AppWidgetProvider {
 
@@ -61,6 +61,7 @@ public class FuckingWidgetProvider extends AppWidgetProvider {
 			Date now = new Date();
 			SimpleDateFormat hourFormat = new SimpleDateFormat("H", Locale.CANADA);
 			SimpleDateFormat minuteFormat = new SimpleDateFormat("m", Locale.CANADA);
+			SimpleDateFormat dayFormat = new SimpleDateFormat("EEEE", Locale.CANADA);
 	
 			int hour = Integer.parseInt(hourFormat.format(now));
 			int minute = Integer.parseInt(minuteFormat.format(now));
@@ -75,6 +76,7 @@ public class FuckingWidgetProvider extends AppWidgetProvider {
 	
 			remoteViews.setTextViewText(R.id.hourTextView, EnglishNumberToWords.convert(hour));
 			remoteViews.setTextViewText(R.id.minuteTextView, EnglishNumberToWords.convert(minute));
+			remoteViews.setTextViewText(R.id.dayTextView, "Bitch, it's " + dayFormat.format(now));
 			
 			appWidgetManager.updateAppWidget(widgetId, remoteViews);
 		}
