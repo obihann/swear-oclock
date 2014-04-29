@@ -1,8 +1,10 @@
-package com.swear;
+package com.obihann.swear;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import com.obihann.swear.R;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -12,6 +14,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.RemoteViews;
 
 public class FuckingWidgetProvider extends AppWidgetProvider {
@@ -22,7 +25,7 @@ public class FuckingWidgetProvider extends AppWidgetProvider {
 	}
 
 	@Override
-	public void onDisabled(Context context) {
+	public void onDisabled(Context context) { 
 		Intent intent = new Intent(context, ShittyBroadcastReceiver.class);
 		PendingIntent sender = PendingIntent.getBroadcast(context, 0, intent, 0);
 		AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
@@ -34,6 +37,7 @@ public class FuckingWidgetProvider extends AppWidgetProvider {
 	@Override
 	public void onEnabled(Context context) {
 		super.onEnabled(context);
+		Log.d("FuckingWidgetProvider", "onEnabled");
 		
 		AlarmManager am=(AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
 		Intent intent = new Intent(context, ShittyBroadcastReceiver.class);
@@ -46,6 +50,8 @@ public class FuckingWidgetProvider extends AppWidgetProvider {
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
 		ComponentName thisWidget = new ComponentName(context, FuckingWidgetProvider.class);
+		
+		Log.d("FuckingWidgetProvider", "onUpdate");
 
 		for (int widgetId : appWidgetManager.getAppWidgetIds(thisWidget)) {
 			//Get the remote views

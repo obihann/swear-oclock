@@ -1,10 +1,10 @@
-package com.swear;
+package com.obihann.swear;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import com.swear.R;
+import com.obihann.swear.R;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;

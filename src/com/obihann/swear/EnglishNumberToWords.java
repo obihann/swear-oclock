@@ -1,4 +1,4 @@
-package com.swear;
+package com.obihann.swear;
 
 import java.text.DecimalFormat;
 
