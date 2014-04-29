@@ -8,11 +8,11 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
+import android.appwidget.AppWidgetProviderInfo;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.RemoteViews;
 
 public class FuckingWidgetProvider extends AppWidgetProvider {
@@ -35,7 +35,6 @@ public class FuckingWidgetProvider extends AppWidgetProvider {
 	@Override
 	public void onEnabled(Context context) {
 		super.onEnabled(context);
-		Log.d("FuckingWidgetProvider", "onEnabled");
 		
 		AlarmManager am=(AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
 		Intent intent = new Intent(context, ShittyBroadcastReceiver.class);
@@ -48,12 +47,15 @@ public class FuckingWidgetProvider extends AppWidgetProvider {
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
 		ComponentName thisWidget = new ComponentName(context, FuckingWidgetProvider.class);
-		
-		Log.d("FuckingWidgetProvider", "onUpdate");
 
 		for (int widgetId : appWidgetManager.getAppWidgetIds(thisWidget)) {
+			Bundle myOptions = appWidgetManager.getAppWidgetOptions (widgetId);
+			int category = myOptions.getInt(AppWidgetManager.OPTION_APPWIDGET_HOST_CATEGORY, -1);
+			boolean isKeyguard = category == AppWidgetProviderInfo.WIDGET_CATEGORY_KEYGUARD;
+			int baseLayout = isKeyguard ? R.layout.sluty_layout_lock : R.layout.sluty_layout;
+			
 			//Get the remote views
-			RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.sluty_layout);
+			RemoteViews remoteViews = new RemoteViews(context.getPackageName(), baseLayout);
 			// Set the text with the current time.
 	
 			Date now = new Date();
