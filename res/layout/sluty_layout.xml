@@ -20,7 +20,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/swearTextView"
         android:layout_centerInParent="true"
-        android:text="@string/the"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="35sp" />
 
@@ -30,7 +29,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@+id/swearTextView"
-        android:text="@string/time"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="35sp" />
 
