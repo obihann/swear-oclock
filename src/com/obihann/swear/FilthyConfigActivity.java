@@ -2,7 +2,6 @@ package com.obihann.swear;
 
 import android.app.Activity;
 import android.os.Bundle;
-import com.obihann.swearoclock.R;
 
 public class FilthyConfigActivity extends Activity {
     @Override

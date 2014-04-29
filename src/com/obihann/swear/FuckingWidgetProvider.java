@@ -15,8 +15,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.RemoteViews;
 
-import com.obihann.swearoclock.R;
-
 public class FuckingWidgetProvider extends AppWidgetProvider {
 
 	@Override
