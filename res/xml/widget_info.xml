@@ -2,5 +2,6 @@
         android:minWidth="400dp"
         android:minHeight="200dp"
         android:updatePeriodMillis="1800000"
-        android:initialLayout="@layout/sluty_layout">
+        android:initialLayout="@layout/sluty_layout"
+        android:widgetCategory="keyguard|home_screen">
 </appwidget-provider>
