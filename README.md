@@ -4,6 +4,7 @@ A simple Android widget that provides the current date and time in a slightly NS
 
 ##Credits
 * Based on [https://plus.google.com/communities/100705267662549485766](Drunk O'Clock') for the Pebble Watch!
+
 ##License
 This tool is protected by the [GNU General Public License v2](http://www.gnu.org/licenses/gpl-2.0.html).
 
