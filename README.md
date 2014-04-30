@@ -1,6 +1,8 @@
 #[![Alt text](https://developer.android.com/images/brand/en_app_rgb_wo_45.png "Android app on Google Play")](https://play.google.com/store/apps/details?id=com.obihann.swear) swear-oclock 
 
-A simple Android widget that provides the current date and time in a slightly NSFW manner. Hide your ears children!
+Is your current clock a little too family friendly? Perhaps you just want the time to be as well versed in colourful vocabulary as you are.
+
+This widget displays the time on your home and lock-screens, with a little explicative added for fun.
 
 ##Credits
 * Based on [https://plus.google.com/communities/100705267662549485766](Drunk O'Clock') for the Pebble Watch!
