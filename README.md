@@ -1,4 +1,4 @@
-#swear-oclock [![Alt text](https://developer.android.com/images/brand/en_app_rgb_wo_45.png "Android app on Google Play")](https://play.google.com/store/apps/details?id=com.obihann.swear)
+#[![Alt text](https://developer.android.com/images/brand/en_app_rgb_wo_45.png "Android app on Google Play")](https://play.google.com/store/apps/details?id=com.obihann.swear) swear-oclock 
 
 A simple Android widget that provides the current date and time in a slightly NSFW manner. Hide your ears children!
 
