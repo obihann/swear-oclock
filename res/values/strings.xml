@@ -14,4 +14,10 @@
 
     <string name="loading">loading the fucking widget</string>
 
+    <string name="day_placeholder">Bitch, it\'s Tuesday</string>
+
+    <string name="minute_placeholder">twenty five</string>
+
+    <string name="hour_placeholder">one</string>
+
 </resources>
