@@ -2,51 +2,45 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" 
-    android:background="#80000000"
-        android:paddingTop="4sp"
-        android:paddingBottom="4sp"
+    android:background="#80000000">
+<RelativeLayout
+        android:id="@+id/timeLayout"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" 
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10sp"
+        android:paddingRight="10sp"
         android:paddingLeft="10sp"
-        android:paddingRight="10sp">
-
+        android:paddingBottom="10sp">
     <TextView
         android:id="@+id/hourTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:text="@string/hour_placeholder"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="35sp" />
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/swearTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/hourTextView"
-        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/hourTextView"
         android:text="@string/fucking"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="35sp"
-        android:textStyle="bold" />
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:paddingRight="10sp"
+        android:paddingLeft="10sp" />
 
     <TextView
         android:id="@+id/minuteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/swearTextView"
-        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/swearTextView"
         android:text="@string/minute_placeholder"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="35sp" />
-
-    <TextView
-        android:id="@+id/dayTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/minuteTextView"
-        android:layout_centerHorizontal="true"
-        android:text="@string/day_placeholder"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="25sp" />
-
+    
+</RelativeLayout>
 </RelativeLayout>

@@ -20,4 +20,6 @@
 
     <string name="hour_placeholder">one</string>
 
+    <string name="app_name_small">Swear O\'Clock Small</string>
+
 </resources>

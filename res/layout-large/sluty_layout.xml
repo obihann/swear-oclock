@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:minWidth="720dp"
     android:layout_height="wrap_content" 
-    android:background="#80000000">
+    android:background="#80000000"
+    android:minWidth="420dp">
 <RelativeLayout
         android:id="@+id/timeLayout"
     	android:layout_width="wrap_content"
@@ -55,5 +55,4 @@
         android:text="@string/day_placeholder"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="25sp" />
-
 </RelativeLayout>

@@ -15,7 +15,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.RemoteViews;
 
-public class FuckingWidgetProvider extends AppWidgetProvider {
+public class SmallFuckingWidgetProvider extends AppWidgetProvider {
 
 	@Override
 	public void onDeleted(Context context, int[] appWidgetIds) {
@@ -24,7 +24,7 @@ public class FuckingWidgetProvider extends AppWidgetProvider {
 
 	@Override
 	public void onDisabled(Context context) { 
-		Intent intent = new Intent(context, ShittyBroadcastReceiver.class);
+		Intent intent = new Intent(context, SmallShittyBroadcastReceiver.class);
 		PendingIntent sender = PendingIntent.getBroadcast(context, 0, intent, 0);
 		AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 		alarmManager.cancel(sender);
@@ -37,7 +37,7 @@ public class FuckingWidgetProvider extends AppWidgetProvider {
 		super.onEnabled(context);
 		
 		AlarmManager am=(AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
-		Intent intent = new Intent(context, ShittyBroadcastReceiver.class);
+		Intent intent = new Intent(context, SmallShittyBroadcastReceiver.class);
 		PendingIntent pi = PendingIntent.getBroadcast(context, 0, intent, 0);
 		
 		//After after 3 seconds
@@ -46,13 +46,13 @@ public class FuckingWidgetProvider extends AppWidgetProvider {
 
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-		ComponentName thisWidget = new ComponentName(context, FuckingWidgetProvider.class);
+		ComponentName thisWidget = new ComponentName(context, SmallFuckingWidgetProvider.class);
 
 		for (int widgetId : appWidgetManager.getAppWidgetIds(thisWidget)) {
 			Bundle myOptions = appWidgetManager.getAppWidgetOptions (widgetId);
 			int category = myOptions.getInt(AppWidgetManager.OPTION_APPWIDGET_HOST_CATEGORY, -1);
 			boolean isKeyguard = category == AppWidgetProviderInfo.WIDGET_CATEGORY_KEYGUARD;
-			int baseLayout = isKeyguard ? R.layout.sluty_layout_lock : R.layout.sluty_layout;
+			int baseLayout = isKeyguard ? R.layout.sluty_layout_lock : R.layout.small_sluty_layout;
 			
 			//Get the remote views
 			RemoteViews remoteViews = new RemoteViews(context.getPackageName(), baseLayout);
