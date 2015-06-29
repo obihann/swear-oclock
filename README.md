@@ -1,4 +1,5 @@
 [![GitHub tag](https://img.shields.io/github/tag/obihann/swear-oclock.svg)](https://github.com/obihann/swear-oclock/tags)
+[![GitHub release](https://img.shields.io/github/release/obihann/swear-oclock.svg)](https://github.com/obihann/swear-oclock/releases)
 [![GitHub issues](https://img.shields.io/github/issues/obihann/swear-oclock.svg)](https://github.com/obihann/swear-oclock/issues)
 [![GitHub license](https://img.shields.io/github/license/obihann/swear-oclock.svg)]()
 
